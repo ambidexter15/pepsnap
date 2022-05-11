@@ -1,13 +1,12 @@
 let video = document.querySelector("video");
 
 let constraint = {
-    video : true,
-    audio : false
+    video : false,  //true
+    audio : false   //true
 }
 
 navigator.mediaDevices.getUserMedia(constraint)
-.then((stream) => 
-{
+.then((stream) => {
   video.srcObject = stream
 })
 
